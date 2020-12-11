@@ -300,7 +300,7 @@ Route::get('/file', function () {
 Route::get('fileProtected',[PostController::class,'fileProtected']);
 
 Route::get('download/{file}',function ($file){
-    return Storage::disk('files')->download($file);
+    // return Storage::disk('files')->download($file);
 })->name('download');
 
 Auth::routes(['verify' => true]);
